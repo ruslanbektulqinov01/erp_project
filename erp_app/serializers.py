@@ -1,6 +1,6 @@
 # serializers.py
 from rest_framework import serializers
-from .models import User, Role, Staff, Customer, ProductStatus, Product, Warehouse, Region, Branch, Order, Archive
+from .models import User, Role, Staff, Customer, Product, Warehouse, Region, Branch, Order, Archive
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -26,11 +26,6 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         fields = '__all__'
 
-
-class ProductStatusSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ProductStatus
-        fields = '__all__'
 
 
 class ProductSerializer(serializers.ModelSerializer):

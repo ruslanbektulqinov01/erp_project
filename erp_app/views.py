@@ -42,9 +42,9 @@ class Manager1ViewSet(viewsets.ModelViewSet):
 class Manager2ViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-
+    # manager2 faqat productning statusini o'zgartira olsin. Agar approved ni tanlasa product warehousega qo'shilsin
     def partial_update(self, request, *args, **kwargs):
-        if 'product_status' not in request.data:
+        if 'status' not in request.data:
             return Response({'error': 'Only product status can be updated.'}, status=400)
         return super().partial_update(request, *args, **kwargs)
 
