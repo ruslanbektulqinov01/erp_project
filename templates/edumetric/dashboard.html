@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduMetric CRM Dashboard</title>
+  <style>
+    :root{--bg:#0b1020;--card:#151c33;--text:#eef2ff;--muted:#a9b3d1;--ok:#19c37d;--warn:#f5a524;--bad:#ef4444;--accent:#5b8cff}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(120deg,#0b1020,#111937);color:var(--text);font-family:Inter,system-ui,Arial}
+    .wrap{max-width:1100px;margin:32px auto;padding:0 16px}
+    .hero{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:20px}
+    .badge{background:#1d2a57;color:#b9ccff;padding:6px 12px;border-radius:999px;font-size:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .card{background:rgba(21,28,51,.9);border:1px solid rgba(255,255,255,.08);padding:16px;border-radius:16px;backdrop-filter: blur(2px)}
+    .kpi{font-size:30px;font-weight:700;margin:8px 0}
+    .muted{color:var(--muted);font-size:13px}
+    .ok{color:var(--ok)} .warn{color:var(--warn)} .bad{color:var(--bad)}
+    .chart{margin-top:18px;height:170px;border-radius:12px;background:linear-gradient(180deg,#22366f 0%,#18264d 100%);position:relative;overflow:hidden}
+    .line{position:absolute;left:0;right:0;bottom:20px;height:2px;background:#87a8ff;transform:skewY(-9deg)}
+    .dot{position:absolute;width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.2)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>EduMetric CRM</h1>
+        <div class="muted">Talabaning haqiqiy rivojlanishini ko‘rsatuvchi zamonaviy dashboard</div>
+      </div>
+      <div class="badge">Live Preview UI</div>
+    </div>
+
+    <div class="grid">
+      <div class="card"><div class="muted">Umumiy EduMetric Score</div><div class="kpi">78.4</div><div class="ok">+3.1 oxirgi 2 hafta</div></div>
+      <div class="card"><div class="muted">Davomat indeksi</div><div class="kpi">82%</div><div class="ok">Barqaror</div></div>
+      <div class="card"><div class="muted">Akademik indeks</div><div class="kpi">74%</div><div class="warn">Qo‘shimcha mashg‘ulot tavsiya</div></div>
+      <div class="card"><div class="muted">Risk darajasi</div><div class="kpi">Medium</div><div class="warn">Mentor nazorati tavsiya</div></div>
+    </div>
+
+    <div class="card chart">
+      <div class="line"></div>
+      <div class="dot" style="left:12%;bottom:46px"></div>
+      <div class="dot" style="left:30%;bottom:56px"></div>
+      <div class="dot" style="left:48%;bottom:62px"></div>
+      <div class="dot" style="left:66%;bottom:78px"></div>
+      <div class="dot" style="left:84%;bottom:88px"></div>
+    </div>
+  </div>
+</body>
+</html>

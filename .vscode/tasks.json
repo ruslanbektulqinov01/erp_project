@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install dependencies",
+      "type": "shell",
+      "command": "python -m pip install -r requirements.txt"
+    },
+    {
+      "label": "Django migrate",
+      "type": "shell",
+      "command": "python manage.py migrate"
+    },
+    {
+      "label": "Django runserver",
+      "type": "shell",
+      "command": "python manage.py runserver"
+    },
+    {
+      "label": "Django test erp_app",
+      "type": "shell",
+      "command": "python manage.py test erp_app"
+    }
+  ]
+}
