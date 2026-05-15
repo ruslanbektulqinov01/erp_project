@@ -1,5 +1,6 @@
 from django.urls import path, include, re_path
 from .routers import router
+from .views import edumetric_dashboard
 from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework import permissions
@@ -20,6 +21,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path('edumetric/dashboard/', edumetric_dashboard, name='edumetric-dashboard'),
     path('api/', include(router.urls)),
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
